@@ -20,10 +20,10 @@
         android:text="MyRestaurants"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:id="@+id/appNameTextView"
         android:textColor="@color/colorTextIcons"
-        android:textSize="40sp"
+        android:textSize="55sp"
         android:textStyle="bold" />
 
     <Button
