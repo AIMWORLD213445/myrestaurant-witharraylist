@@ -13,6 +13,9 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -20,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
     @Bind(R.id.locationEditText) EditText mLocationEditText;
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
+    @Bind(R.id.addRestaurantButton) Button mAddRestaurantButton;
+    @Bind(R.id.addRestaurant) EditText mAddRestaurant;
+
+    private ArrayList<String> restaurants =  new ArrayList<String>(Arrays.asList("Mi Mero Mole", "Mother's Bistro",
+            "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
+            "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
+            "Lardo", "Portland City Grill", "Fat Head's Brewery",
+            "Chipotle", "Subway"));
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         mFindRestaurantsButton.setTypeface(buttonFont);
 
 
-
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -43,5 +54,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-}
+
+        mAddRestaurantButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String restaurant = mAddRestaurant.getText().toString();
+                restaurants.add(restaurant);
+                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                String[] restaurantsArray = restaurants.toArray(new String[0]);
+                intent.putExtra("restaurants",restaurantsArray);
+                startActivity(intent);
+            }
+        });
+
+    }
 }

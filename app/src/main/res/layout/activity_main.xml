@@ -41,13 +41,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/locationEditText"
-        android:layout_above="@+id/findRestaurantsButton"
-        android:layout_centerHorizontal="true"
         android:background="@color/colorTextIcons"
-        android:layout_marginBottom="10dp"
         android:padding="5dp"
         android:hint="Enter Zip Code"
-        />
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_above="@+id/findRestaurantsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addRestaurant"
+        android:padding="5dp"
+        android:background="@color/colorTextIcons"
+        android:hint="Add a Restaurant"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:text="Add Restaurant"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorTextIcons"
+        android:id="@+id/addRestaurantButton"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/addRestaurant"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
