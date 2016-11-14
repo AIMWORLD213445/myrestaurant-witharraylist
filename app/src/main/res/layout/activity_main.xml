@@ -35,6 +35,17 @@
         android:layout_centerHorizontal="true"
         />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationEditText"
+        android:layout_above="@+id/findRestaurantsButton"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorTextIcons"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:hint="Enter Zip Code"
+        />
 
 
 </RelativeLayout>
