@@ -31,7 +31,7 @@ public class RestaurantsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
                 String restaurant = ((TextView)view).getText().toString();
-                Toast.makeText(RestaurantsActivity.this, restaurant, Toast.LENGTH_LONG).show();
+                Toast.makeText(RestaurantsActivity.this, restaurant, Toast.LENGTH_SHORT).show();
             }
         });
         Intent intent = getIntent();
