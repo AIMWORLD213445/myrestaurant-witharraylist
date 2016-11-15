@@ -29,10 +29,13 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Find Restaurants"
+        android:text="Find And/Or Add Restaurants"
         android:id="@+id/findRestaurantsButton"
         android:background="@color/colorAccent"
         android:textColor="@color/colorTextIcons"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         />
@@ -44,11 +47,11 @@
         android:background="@color/colorTextIcons"
         android:padding="5dp"
         android:hint="Enter Zip Code"
-        android:layout_marginRight="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_above="@+id/findRestaurantsButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginTop="475dp"
+        android:layout_alignLeft="@+id/appNameTextView"
+        android:layout_marginLeft="42dp"
+
+         />
 
     <EditText
         android:layout_width="wrap_content"
@@ -57,19 +60,13 @@
         android:padding="5dp"
         android:background="@color/colorTextIcons"
         android:hint="Add a Restaurant"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="200sp"
-        android:layout_height="wrap_content"
-        android:text="Add Restaurant"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/colorTextIcons"
-        android:id="@+id/addRestaurantButton"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/addRestaurant"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignRight="@+id/appNameTextView"
+        android:layout_alignEnd="@+id/appNameTextView"
+        android:layout_marginRight="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginTop="475dp"/>
+
 
 
 </RelativeLayout>

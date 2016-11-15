@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
     @Bind(R.id.locationEditText) EditText mLocationEditText;
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
-    @Bind(R.id.addRestaurantButton) Button mAddRestaurantButton;
     @Bind(R.id.addRestaurant) EditText mAddRestaurant;
 
     private ArrayList<String> restaurants =  new ArrayList<String>(Arrays.asList("Mi Mero Mole", "Mother's Bistro",
@@ -51,16 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 String location = mLocationEditText.getText().toString();
                 Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
                 intent.putExtra("location", location);
-                startActivity(intent);
-            }
-        });
-
-        mAddRestaurantButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
                 String restaurant = mAddRestaurant.getText().toString();
-                restaurants.add(restaurant);
-                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                if(!restaurant.isEmpty()){
+                    restaurants.add(restaurant);
+                }
                 String[] restaurantsArray = restaurants.toArray(new String[0]);
                 intent.putExtra("restaurants",restaurantsArray);
                 startActivity(intent);

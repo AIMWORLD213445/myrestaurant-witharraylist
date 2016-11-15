@@ -34,13 +34,15 @@ public class RestaurantsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
         String[] restaurants = intent.getStringArrayExtra("restaurants");
+        Log.d(TAG, "Location is: " + location);
+
+    if(!location.isEmpty()){
+        mLocationTextView.setText("Here are all the restaurants near: " + location);
+    }else{
+        mLocationTextView.setText("Here are all the restaurants");
+    }
 
 
-        if(location!=null){
-            mLocationTextView.setText("Here are all the restaurants near: " + location);
-        }else{
-            mLocationTextView.setText("Here are all the restaurants");
-        }
 
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, restaurants);
